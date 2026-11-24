@@ -43,3 +43,46 @@ table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:8px;bord
 .cp{text-align:center;padding:14px;color:#8a97b5;border-top:1px solid #222;margin-top:18px;font-size:13px}
 @media(max-width:800px){.hero,.two,.fg,.portal,.portal.rt{grid-template-columns:1fr}nav a{padding:10px 12px}.portal.rt .side{order:-1}}
 @media(prefers-reduced-motion:reduce){#drawer{transition:none}}
+
+/* ---- Homepage design (mockup) ---- */
+:root{--nv:#0a1f5c;--nv2:#0d2a78;--sky:#e6efff}
+.top{background:#000;padding:7px 22px;font-size:15px;color:#fff}.top b{font-weight:600}
+.hd{display:flex;align-items:center;gap:18px;padding:10px 24px;border:0;text-align:center;background:linear-gradient(100deg,#fff 0 72%,#dbe7ff 86%,#0a58ff 100%)}
+.logo{height:92px;width:auto}.ttl{flex:1}.ttl h1{font-size:clamp(24px,4.6vw,58px);font-weight:900;color:var(--nv);letter-spacing:1px;margin:0;line-height:1.1}
+.ttl p{margin:6px 0 0}.ttl p span{display:inline-block;background:var(--nv);color:#fff;padding:3px 34px;border-radius:30px;font-size:clamp(15px,2.2vw,26px);font-weight:600}
+nav{background:var(--nv);justify-content:space-around;border-top:2px solid #1d49b8;padding:6px 10px}
+nav a{padding:11px 22px;border-radius:8px;display:flex;gap:9px;align-items:center;font-size:17px;letter-spacing:.3px;text-transform:uppercase}
+nav a+a{position:relative}nav a.on{background:linear-gradient(#1b66ff,#0a47c9)}
+nav a:hover{background:#17399a}
+main{max-width:1240px;padding:0 14px 6px}
+.hero2{display:grid;grid-template-columns:1.05fr 1fr 330px;gap:0;align-items:stretch;background:linear-gradient(120deg,#f4f8ff,#dfe9ff);margin:0 -14px;padding:22px 20px 22px;position:relative;overflow:hidden}
+.wl{padding:6px 8px 0 4px;z-index:2}.pill{display:inline-block}
+.wl .wp{display:inline-block;background:var(--nv);color:#fff;border-radius:18px;padding:3px 22px;font-size:26px;font-weight:700}
+.wl h2{font-size:clamp(40px,5.4vw,70px);line-height:.98;color:var(--nv);font-weight:900;margin:8px 0 12px;letter-spacing:.5px}
+.wl em{display:block;font:italic 700 clamp(20px,2.4vw,29px)/1.2 Georgia,"Times New Roman",serif;color:var(--nv);border-bottom:2px solid var(--nv2);border-radius:0 0 60% 40%;padding-bottom:6px;width:fit-content;margin-bottom:14px}
+.wl li{list-style:none;font-size:20px;font-weight:600;color:var(--nv);padding:3px 0}.wl ul{margin:0;padding:0}.wl li:before{content:"\2714";background:var(--nv);color:#fff;border-radius:50%;width:26px;height:26px;display:inline-grid;place-items:center;font-size:14px;margin-right:12px}
+.shop{display:flex;align-items:center;justify-content:center}.shop img{max-width:100%;max-height:420px;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 92%,transparent)}
+.lg2{background:#fff;border:2px solid var(--nv);border-radius:16px;overflow:hidden;align-self:start;box-shadow:0 6px 18px #0a1f5c33;z-index:2}
+.lg2 .lh{background:var(--nv);color:#fff;padding:14px 22px;font-size:27px;font-weight:700;display:flex;gap:12px;align-items:center}
+.lg2 .lb{padding:16px 18px 14px}.seg{display:flex;background:#e9eefb;border-radius:20px;padding:3px;margin-bottom:12px}
+.seg button{flex:1;border:0;background:none;border-radius:18px;padding:6px;font-weight:700;color:var(--nv);cursor:pointer}.seg button.on{background:var(--nv);color:#fff}
+.fi{display:flex;align-items:center;gap:10px;border:1.5px solid #b9c6de;border-radius:12px;padding:0 12px;margin-bottom:11px;background:#fff}
+.fi input{border:0;margin:0;padding:12px 0;outline:0;background:none;font-size:16px}.fi:focus-within{border-color:var(--bl);box-shadow:0 0 0 3px #9bbcff}
+.rm{display:flex;justify-content:space-between;font-size:14px;margin-bottom:12px}.rm label{font-weight:500;display:flex;gap:7px;align-items:center}.rm input{width:auto;margin:0}
+.lg2 .btn{width:100%;background:linear-gradient(var(--nv2),var(--nv));font-size:20px;padding:12px;border-radius:10px}
+.lg2 .nu{border-top:2px solid var(--nv);margin-top:14px;padding-top:12px;text-align:center}
+.box{background:#fff;border:2px solid var(--nv);border-radius:14px;overflow:hidden}
+.box .bh{background:var(--nv);color:#fff;padding:11px 16px;display:flex;justify-content:space-between;align-items:center;font-size:23px;font-weight:700}
+.box .bh a{color:#fff;font-size:15px;text-decoration:none;font-weight:600}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.ni{display:flex;align-items:center;gap:12px;padding:9px 14px;border-bottom:1px solid var(--ln);font-weight:500}.ni:last-child{border:0}
+.new{background:#e5251b;color:#fff;font-size:12px;font-weight:800;border-radius:4px;padding:2px 9px}.ni .t{flex:1}.ni .dt{font-size:14px;font-weight:600;white-space:nowrap}
+.ji{display:flex;align-items:center;gap:12px;padding:9px 14px;border-bottom:1px solid var(--ln)}.ji:last-child{border:0}
+.jb{width:44px;height:44px;border-radius:50%;background:var(--sky);border:2px solid var(--nv2);display:grid;place-items:center;font-weight:800;color:var(--nv);font-size:13px;flex:none}
+.ji .t{flex:1;font-weight:600;line-height:1.3}.ji small{display:block;font-weight:500;color:#444}
+.ji .ap{background:var(--nv2);color:#fff;border-radius:6px;padding:8px 14px;font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap}
+#foot{margin:0;background:#000;border-radius:0;padding:14px 18px 16px}.fg{grid-template-columns:1.4fr 1fr;gap:26px;max-width:1240px}
+.fg iframe{height:190px}.fg h3{color:#fff;font-size:23px;border-bottom:1px solid #444;padding-bottom:8px}.an{color:#ffe600;font-size:23px;font-weight:800;margin:6px 0}
+.cp{background:#000;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:0;border-top:1px solid #222;padding:14px 22px;color:#fff;font-size:15px}.cp i{font-weight:500}
+.flag{display:inline-block;width:42px;height:28px;vertical-align:middle;margin-left:10px;background:linear-gradient(#ff9933 33%,#fff 33% 66%,#138808 66%);border-radius:2px}
+@media(max-width:1000px){.hero2{grid-template-columns:1fr}.shop{display:none}.lists,.fg{grid-template-columns:1fr}.logo{height:60px}nav{justify-content:center}nav a{padding:9px 12px;font-size:14px}}

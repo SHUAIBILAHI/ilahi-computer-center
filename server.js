@@ -31,7 +31,7 @@ A.post('/activation',(q,s)=>{const u=db.users.find(x=>x.mobile===q.body.mobile);
 A.get('/me',auth(),(q,s)=>{const u=db.users.find(x=>x.id===q.who.id);if(u){u.last=Date.now();save()}s.json({role:q.who.role,user:u&&pub(u)})});
 const crud=(k,fields,role='admin')=>{A.post('/'+k,auth(role),(q,s)=>{const o={id:uid()};fields.forEach(f=>o[f]=q.body[f]);if(k==='notices')o.date=Date.now();db[k].push(o);save();s.json(o)});
  A.delete('/'+k+'/:id',auth(role),(q,s)=>{db[k]=db[k].filter(x=>x.id!==q.params.id);if(k==='cats')db.services=db.services.filter(x=>x.cat!==q.params.id);save();s.json({ok:1})})};
-crud('cats',['name']);crud('services',['cat','name','desc','docs']);crud('notices',['type','title']);crud('downloads',['title','url']);
+crud('cats',['name']);crud('services',['cat','name','desc','docs']);crud('notices',['type','title','last','link']);crud('downloads',['title','url']);
 A.put('/services/:id',auth('admin'),(q,s)=>{const o=db.services.find(x=>x.id===q.params.id);if(o)Object.assign(o,{cat:q.body.cat,name:q.body.name,desc:q.body.desc,docs:q.body.docs});save();s.json(o)});
 A.get('/downloads',auth(),(q,s)=>s.json(db.downloads));
 A.post('/requests',auth('user'),(q,s)=>{const sv=db.services.find(x=>x.id===q.body.service);if(!sv)return s.status(400).json({error:'Service nahi mili'});
