@@ -1,0 +1,69 @@
+{
+ "cats": [
+  {
+   "id": "a2bf93f458",
+   "name": "E-district"
+  }
+ ],
+ "services": [
+  {
+   "id": "f1ae457ca6",
+   "cat": "a2bf93f458",
+   "name": "Incoome Certificate ",
+   "desc": "Related Documents",
+   "docs": [
+    "Aadhar Card",
+    "Mobile Number",
+    "Photo"
+   ]
+  }
+ ],
+ "notices": [
+  {
+   "id": "27225a0008",
+   "type": "imp",
+   "title": "Center ka samay subah 9 se shaam 7 baje tak",
+   "date": 1795549175621
+  },
+  {
+   "id": "ed17c8d1da",
+   "type": "job",
+   "title": "UP Police Constable Bharti – form bharna shuru",
+   "date": 1795549175621
+  }
+ ],
+ "downloads": [],
+ "users": [
+  {
+   "id": "41e799d258",
+   "name": "shuaib ilahi",
+   "mobile": "9258901511",
+   "pass": "e166ed15d4cb9b39:ac16a965d878ffbd096cb14111ae5f39a258a0f786f04c7dc2f55b93d94da888",
+   "active": true,
+   "joined": 1795553283796,
+   "last": 1795553305487
+  }
+ ],
+ "requests": [],
+ "chat": [],
+ "act": [],
+ "sessions": {
+  "e18888b8d7ca8eb90855055edb1062c6": {
+   "role": "admin",
+   "id": "admin"
+  },
+  "a07ad392d67f0a3e4dcf25173a203000": {
+   "role": "admin",
+   "id": "admin"
+  },
+  "bd904583816cc4817916863e0ff94014": {
+   "role": "user",
+   "id": "41e799d258"
+  },
+  "2fde5c1d28fb431c8dd06818c9581585": {
+   "role": "admin",
+   "id": "admin"
+  }
+ },
+ "admin": "8e08cc1b198c833c:c18f399d8608dfff998f2f6acfb318857abd8a251b9e260887168a987a9ade29"
+}

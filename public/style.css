@@ -86,3 +86,122 @@ main{max-width:1240px;padding:0 14px 6px}
 .cp{background:#000;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:0;border-top:1px solid #222;padding:14px 22px;color:#fff;font-size:15px}.cp i{font-weight:500}
 .flag{display:inline-block;width:42px;height:28px;vertical-align:middle;margin-left:10px;background:linear-gradient(#ff9933 33%,#fff 33% 66%,#138808 66%);border-radius:2px}
 @media(max-width:1000px){.hero2{grid-template-columns:1fr}.shop{display:none}.lists,.fg{grid-template-columns:1fr}.logo{height:60px}nav{justify-content:center}nav a{padding:9px 12px;font-size:14px}}
+/* ---- Chhote fonts ---- */
+body{font-size:14px}
+.top{font-size:13px;padding:5px 18px}
+.logo{height:64px}
+.ttl h1{font-size:clamp(20px,3.2vw,38px)}
+.ttl p span{font-size:clamp(13px,1.6vw,18px);padding:2px 26px}
+nav a{font-size:14px;padding:9px 16px}
+.wl .wp{font-size:18px;padding:2px 18px}
+.wl h2{font-size:clamp(28px,3.6vw,46px)}
+.wl em{font-size:clamp(16px,1.8vw,21px)}
+.wl li{font-size:16px}
+.wl li:before{width:22px;height:22px;font-size:12px}
+.lg2 .lh{font-size:20px;padding:11px 18px}
+.fi input{font-size:14px;padding:9px 0}
+.lg2 .btn{font-size:16px;padding:10px}
+.box .bh{font-size:18px;padding:9px 14px}
+.box .bh a{font-size:13px}
+.ni,.ji{font-size:14px;padding:8px 12px}
+.ni .dt{font-size:12px}
+.ji .ap{font-size:12px;padding:6px 11px}
+.jb{width:38px;height:38px;font-size:12px}
+.fg h3{font-size:18px}
+.an{font-size:18px}
+.since{font-size:15px}
+.cp{font-size:13px}
+.flag{width:34px;height:22px}
+body{font-size:13px}.wl h2{font-size:clamp(24px,3vw,38px)}.ttl h1{font-size:clamp(18px,2.6vw,32px)}nav a{font-size:13px}
+/* ---- Navigation gap kam ---- */
+nav{justify-content:center;gap:6px}
+nav a{padding:9px 14px}
+/* ---- Navigation left side, 1 inch left gap ---- */
+nav{justify-content:flex-start;padding-left:96px;gap:6px}
+@media(max-width:1000px){nav{padding-left:10px;justify-content:center}}
+/* ---- Header right side swoosh design ---- */
+.hd{position:relative;overflow:hidden;background:linear-gradient(100deg,#fff 0 82%,#eef4ff 100%)}
+.logo,.ttl{position:relative;z-index:2}
+.hd::before{content:"";position:absolute;top:-20px;right:-30px;width:300px;height:200%;background:linear-gradient(120deg,#e3ecff,#8db4ff);transform:skewX(-25deg);transform-origin:top right;border-top-left-radius:90px;z-index:1}
+.hd::after{content:"";position:absolute;top:-20px;right:-80px;width:190px;height:200%;background:linear-gradient(120deg,#1b66ff,#0a1f5c);transform:skewX(-25deg);transform-origin:top right;border-left:5px solid #fff;border-top-left-radius:70px;z-index:1}
+@media(max-width:1000px){.hd::before{width:150px}.hd::after{width:90px}}
+@media(max-width:600px){.hd::before,.hd::after{display:none}}
+/* ---- Header right side swoosh design ---- */
+.hd{position:relative;overflow:hidden;background:linear-gradient(100deg,#fff 0 82%,#eef4ff 100%)}
+.logo,.ttl{position:relative;z-index:2}
+.hd::before{content:"";position:absolute;top:-20px;right:-30px;width:300px;height:200%;background:linear-gradient(120deg,#e3ecff,#8db4ff);transform:skewX(-25deg);transform-origin:top right;border-top-left-radius:90px;z-index:1}
+.hd::after{content:"";position:absolute;top:-20px;right:-80px;width:190px;height:200%;background:linear-gradient(120deg,#1b66ff,#0a1f5c);transform:skewX(-25deg);transform-origin:top right;border-left:5px solid #fff;border-top-left-radius:70px;z-index:1}
+@media(max-width:1000px){.hd::before{width:150px}.hd::after{width:90px}}
+@media(max-width:600px){.hd::before,.hd::after{display:none}}
+/* ---- Hero: image wala background ---- */
+.hero2{margin:0;background:url(hero.jpg) center/100% 100% no-repeat;aspect-ratio:1221/413;min-height:400px;grid-template-columns:38% 1fr 25%;padding:0 1.5% 0 2.2%;align-items:center;overflow:hidden}
+.shop{display:none}
+.wl{align-self:center}
+.lg2{align-self:center;border-radius:18px;box-shadow:0 8px 24px rgba(10,31,92,.3)}
+@media(max-width:1000px){.hero2{aspect-ratio:auto;grid-template-columns:1fr;padding:22px 14px;background:linear-gradient(90deg,#f7f9fe,#d4e4fd)}}
+/* ---- Hero: bada font + login right side ---- */
+.hero2{grid-template-columns:42% 1fr 25%}
+.wl{grid-column:1}
+.lg2{grid-column:3;justify-self:end;width:100%}
+.wl .wp{font-size:clamp(17px,1.9vw,24px);padding:3px 22px}
+.wl h2{font-size:clamp(38px,4.9vw,62px);line-height:1}
+.wl em{font-size:clamp(19px,2.2vw,28px)}
+.wl li{font-size:clamp(16px,1.6vw,20px)}
+.wl li:before{width:26px;height:26px;font-size:14px}
+@media(max-width:1000px){.hero2{grid-template-columns:1fr}.wl,.lg2{grid-column:1}}
+/* ---- Hero font: hero ki chaudai ke hisaab se ---- */
+.hero2{container-type:inline-size;--f:1}
+.wl{min-width:0;padding-right:8px}
+.wl .wp{font-size:max(14px,calc(1.7cqw*var(--f)))}
+.wl h2{font-size:max(24px,calc(4.1cqw*var(--f)));line-height:1.02;overflow-wrap:normal}
+.wl em{font-size:max(15px,calc(2cqw*var(--f)));width:auto;max-width:100%}
+.wl li{font-size:max(14px,calc(1.55cqw*var(--f)))}
+.wl li:before{width:1.5em;height:1.5em;font-size:.8em}
+@media(max-width:1000px){.wl h2{font-size:clamp(30px,8vw,46px)}.wl .wp{font-size:18px}.wl em{font-size:20px}.wl li{font-size:17px}}
+/* ---- Naam left, chhota vargakar map, address ke right mein contact ---- */
+header.hd .ttl,header.hd .ttl h1,header.hd .ttl p{text-align:left!important}
+header.hd .ttl{flex:1;padding-left:8px}
+#foot .fx{display:grid;grid-template-columns:180px auto auto;gap:36px;justify-content:start;align-items:start;max-width:1240px;margin:0 auto}
+#foot .mp{width:180px;height:180px;border:0;border-radius:8px}
+#foot h3{color:#fff;font-size:18px;border-bottom:1px solid #444;padding-bottom:6px;margin:0 0 8px}
+#foot .cnt p{line-height:2;margin:0}
+#foot .cnt a{color:#8fbaff;text-decoration:none}
+#foot .cnt a:hover{text-decoration:underline}
+@media(max-width:800px){#foot .fx{grid-template-columns:1fr}#foot .mp{width:100%;height:220px}}
+
+/* ---- Admin dashboard v2 ---- */
+.sv{width:1em;height:1em;flex:none;display:inline-block;vertical-align:middle}
+.hd{position:relative}
+#wa{position:absolute;right:0;bottom:0;background:#071a52;color:#fff;padding:12px 24px 12px 34px;border-radius:34px 0 0 0;font-weight:600;cursor:pointer;z-index:30;display:flex;align-items:center;gap:10px;font-size:16px}
+#wa .sv{font-size:26px}#wa .sv:last-of-type{font-size:22px}
+#wa .wm{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid var(--ln);border-radius:8px;min-width:150px;box-shadow:0 6px 18px #0a1f5c33}
+#wa.open .wm{display:block}#wa .wm a{display:block;padding:11px 16px;color:#0a1f5c;cursor:pointer;text-decoration:none}
+body.adm-on nav,body.adm-on #foot{display:none}
+body.adm-on main{max-width:none;padding:0;margin:0}
+.adm{display:grid;grid-template-columns:282px 1fr;min-height:760px}
+.as{background:linear-gradient(180deg,#0a1f66,#06124a);display:flex;flex-direction:column;padding:10px 0 18px}
+.as a{color:#fff;text-decoration:none;display:flex;align-items:center;gap:16px;padding:0 22px;height:60px;font-weight:500;font-size:17px;letter-spacing:-.2px;cursor:pointer;position:relative}
+.as a:after{content:"";position:absolute;left:22px;right:18px;bottom:0;border-bottom:1px solid #2a3f8f}
+.as a .sv:first-child{font-size:30px}.as a>span{flex:1}.as a>.sv:last-child:not(:first-child){font-size:24px}
+.as a.on{background:linear-gradient(#2a77ff,#1558e0);height:68px;margin-top:-10px;padding-top:10px;font-size:18px}.as a.on:after{display:none}
+.as a.sub{height:54px;padding-left:44px}.as a.sub .sv:first-child{font-size:26px}.as a.sub:after{left:22px}
+.as a.lo{margin-top:auto;border-top:1px solid #2a3f8f}.as a.lo:after{display:none}
+.ac{padding:22px 20px;min-width:0;background:radial-gradient(ellipse at 88% 100%,#c5d9ff 0,transparent 55%),linear-gradient(160deg,#f6f9ff,#e6efff 60%,#f3f7ff)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-bottom:24px}
+.sc{display:flex;align-items:center;gap:18px;color:#fff;border-radius:8px;padding:0 22px;min-height:118px;box-shadow:0 4px 10px #0003}
+.sc>.sv{font-size:68px}.sc small{display:block;font-size:20px;font-weight:500}.sc b{display:block;font-size:44px;line-height:1.05;font-weight:700}
+.sc.b{background:linear-gradient(#2a77ff,#0b4ed0)}.sc.g{background:linear-gradient(#27c346,#0c8a22)}.sc.o{background:linear-gradient(#ffb62a,#f08000)}.sc.pu{background:linear-gradient(#a45bff,#6a22d4)}
+.dg{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;align-items:start}
+.dbx{background:#fff;border:2px solid #0a1f5c;border-radius:10px;overflow:hidden;box-shadow:0 3px 8px #0a1f5c22}
+.dh{background:linear-gradient(#0c2a78,#071a52);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 16px;height:60px;font-size:24px;font-weight:700}
+.dh>span{display:flex;align-items:center;gap:14px}.dh .sv{font-size:34px}
+.dh a{color:#fff;font-size:16px;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:8px}.dh a .sv{font-size:22px}
+.dt{width:100%;border-collapse:collapse}.dt th,.dt td{padding:12px 10px;text-align:left;border-bottom:1px solid #e1e8f5;border-right:1px solid #eef2fa;font-size:16px;white-space:nowrap}
+.dt th{font-weight:800;font-size:17px;padding-top:14px}.dt th:last-child,.dt td:last-child{border-right:0}.dt .em{white-space:normal;text-align:center;padding:30px;color:#667}
+.bd{color:#fff;border-radius:4px;padding:5px 11px;font-size:14px;font-weight:600;display:inline-block}
+.bd.p{background:#ffb300}.bd.a{background:#12a312}.bd.r{background:#e5251b}.bd.i{background:#0a58ff}
+.vw{background:#0a58ff;color:#fff;border-radius:4px;padding:6px 14px;text-decoration:none;font-weight:600;font-size:15px;display:inline-block}
+.jn{display:flex;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid #e1e8f5;font-weight:700;font-size:20px;line-height:1.25}
+.jn:before{content:"";width:14px;height:14px;border-radius:50%;background:#0a58ff;flex:none}.jn span{flex:1}.jn small{font-weight:500;white-space:nowrap;font-size:16px}
+@media(max-width:1100px){.dg{grid-template-columns:1fr}}
+@media(max-width:900px){.adm{grid-template-columns:1fr}.as{flex-direction:row;flex-wrap:wrap;padding:0}.as a,.as a.on{flex:1 1 46%;height:52px;margin:0;padding-top:0}.as a.sub{padding-left:22px}.as a.lo{margin-top:0}}

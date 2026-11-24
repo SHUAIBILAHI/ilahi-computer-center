@@ -13,7 +13,7 @@ if(fs.existsSync(F))db=JSON.parse(fs.readFileSync(F));else{
  db.notices=[{id:uid(),type:'imp',title:'Center ka samay subah 9 se shaam 7 baje tak',date:Date.now()},{id:uid(),type:'job',title:'UP Police Constable Bharti – form bharna shuru',date:Date.now()}];save();}
 function save(){fs.mkdirSync(DIR,{recursive:true});fs.writeFileSync(F,JSON.stringify(db,null,1));}
 function sweep(){let ch=0;db.users.forEach(u=>{if(u.active&&Date.now()-u.last>30*DAY){u.active=false;ch=1}});if(ch)save();}
-const app=express();app.use(express.json());app.use(express.static(path.join(__dirname,'public')));
+const app=express();app.use(express.json({limit:'1mb'}));app.use(express.static(path.join(__dirname,'public')));
 const A=express.Router(),auth=r=>(q,s,n)=>{const t=db.sessions[q.headers['x-token']];if(!t||(r&&t.role!==r))return s.status(401).json({error:'Pehle login karein'});q.who=t;n()};
 const pub=u=>({id:u.id,name:u.name,mobile:u.mobile,active:u.active,last:u.last,joined:u.joined});
 const login=(s,role,id)=>{const t=crypto.randomBytes(16).toString('hex');db.sessions[t]={role,id};save();s.json({token:t,role,id})};
@@ -31,7 +31,7 @@ A.post('/activation',(q,s)=>{const u=db.users.find(x=>x.mobile===q.body.mobile);
 A.get('/me',auth(),(q,s)=>{const u=db.users.find(x=>x.id===q.who.id);if(u){u.last=Date.now();save()}s.json({role:q.who.role,user:u&&pub(u)})});
 const crud=(k,fields,role='admin')=>{A.post('/'+k,auth(role),(q,s)=>{const o={id:uid()};fields.forEach(f=>o[f]=q.body[f]);if(k==='notices')o.date=Date.now();db[k].push(o);save();s.json(o)});
  A.delete('/'+k+'/:id',auth(role),(q,s)=>{db[k]=db[k].filter(x=>x.id!==q.params.id);if(k==='cats')db.services=db.services.filter(x=>x.cat!==q.params.id);save();s.json({ok:1})})};
-crud('cats',['name']);crud('services',['cat','name','desc','docs']);crud('notices',['type','title','last','link']);crud('downloads',['title','url']);
+crud('cats',['name','icon']);crud('services',['cat','name','desc','docs']);crud('notices',['type','title','last','link']);crud('downloads',['title','url']);
 A.put('/services/:id',auth('admin'),(q,s)=>{const o=db.services.find(x=>x.id===q.params.id);if(o)Object.assign(o,{cat:q.body.cat,name:q.body.name,desc:q.body.desc,docs:q.body.docs});save();s.json(o)});
 A.get('/downloads',auth(),(q,s)=>s.json(db.downloads));
 A.post('/requests',auth('user'),(q,s)=>{const sv=db.services.find(x=>x.id===q.body.service);if(!sv)return s.status(400).json({error:'Service nahi mili'});
